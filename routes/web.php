@@ -16,11 +16,15 @@ Route::get('welcome', function ()
 });
 //Route::get('/contact/{name}', 'ContactController@get_data');
 
+//Insert Data
 Route::get('contact/create', 'ContactController@index');
 Route::post('contact/store', 'ContactController@store');
-Route::get('contact/contact_list', 'ContactController@contact_list');
+Route::get('contact', 'ContactController@contact_list');
 
-
+//Edit And Delete
+Route::get('contact/edit/{id}', 'ContactController@edit');
+Route::post('contact/update/{id}', 'ContactController@update');
+Route::get('contact/delete/{id}', 'ContactController@delete');
 
 Auth::routes();
 

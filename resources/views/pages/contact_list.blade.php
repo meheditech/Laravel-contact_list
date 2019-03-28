@@ -18,6 +18,7 @@
 <body>
 <div class="jumbotron">
     <div class="container">
+        <h3>Contact List</h3>
         <table class="table table-striped table-responsive">
             <tr>
                 <th>ID</th>
@@ -27,6 +28,7 @@
                 <th>Password</th>
                 <th>Address</th>
                 <th>Create At</th>
+                <th>Updated At</th>
                 <th>Action</th>
             </tr>
             @foreach($contacts as $contact)
@@ -38,11 +40,30 @@
                     <td>{{ $contact->password }}</td>
                     <td>{{ $contact->address }}</td>
                     <td>{{ Carbon\Carbon::parse($contact->created_at)->diffForHumans() }}</td>
+                    <td>{{ Carbon\Carbon::parse($contact->updated_at)->diffForHumans() }}</td>
                     <td>
-                        <a href="#" class="btn btn-success btn-sm">Edit</a> | <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                        <a href="{{ url('contact/edit', $contact->id) }}" class="btn btn-success btn-sm">Edit</a> | <a href="{{ url                                                                     ('contact/delete', $contact->id) }}" class="btn btn-danger btn-sm">Delete</a>
                     </td>
                 </tr>
             @endforeach
+            @if(Session::has('success'))
+                <script>
+                    Swal.fire(
+                        'Good job!',
+                        '{{ Session::get("success") }}',
+                        'success'
+                    )
+                </script>
+            @endif
+            @if(Session::has('error'))
+                <script>
+                    Swal.fire(
+                        'Bad job!',
+                        '{{ Session::get("error") }}',
+                        'error'
+                    )
+                </script>
+            @endif
         </table>
     </div>
 </div>

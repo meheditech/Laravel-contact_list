@@ -34,4 +34,38 @@ class ContactController extends Controller
         $contacts = Contact::all();
         return view('pages/contact_list', compact('contacts'));
     }
+
+    //Edit and Update
+    public function edit($id)
+    {
+        $data = Contact::findOrFail($id);
+
+        return view('forms.edit',compact('data'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $input = $request->all();
+        $data = Contact::findOrFail($id);
+        try{
+            $data->update($input);
+            $error=0;
+        } catch (\Exception $e){
+            $error=1;
+
+        }
+        if ($error==0)
+            return redirect('contact')->with('success', 'Contact Update');
+        else
+            return redirect('contact')->with('error', 'Please Fill up this Form');
+
+        return $data;
+    }
+
+    //DELETE
+    public function delete($id){
+        $data = Contact::findOrFail($id);
+        $data->delete();
+        return redirect('contact')->with('success', 'Contact Deleted Successfully');
+    }
 }
