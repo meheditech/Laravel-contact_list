@@ -1,0 +1,251 @@
+ul{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    font: outline;
+    font-family:  sans-serif;
+    font-size: 14px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+p{
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+a#scrollUp {
+    bottom: 0px;
+    right: 10px;
+    padding: 5px 10px;
+    background: #FE980F;
+    color: #FFF;
+    animation: bounce 2s ease infinite;
+  }
+  
+  a#scrollUp i{
+    font-size: 30px;
+  }
+
+
+div#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url('../img/preloader.gif') no-repeat center center;
+}
+/* Header Top */
+
+.contactinfo ul li{
+    display: inline;
+}
+
+.contactinfo ul li a{
+    padding: 10px 15px;
+    color: white;
+}
+
+.social-icon ul{
+    display: inline;
+}
+
+.social-icon ul li{
+    display: inline-block;
+}
+
+.contactinfo ul li:first-child{
+    margin-left: -15px;
+}
+
+.social-icon ul li a{
+    font-size: 20px;
+    color: #696763;
+}
+
+.social-icon ul li a {
+    padding: 10px 10px;
+    transition: all 0.9s ease 0s;
+    -moz-transition: all 0.9s ease 0s;
+    -webkit-transition: all 0.9s ease 0s;
+    -o-transition: all 0.9s ease 0s;
+}
+
+.social-icon ul li a:hover{
+    color: #fff;
+    transition: all 0.9s ease 0s;
+    -moz-transition: all 0.9s ease 0s;
+    -webkit-transition: all 0.9s ease 0s;
+    -o-transition: all 0.9s ease 0s;
+}
+
+.navbar-nav li a{
+    color: #6c757d;
+}
+
+.navbar-nav li a:hover{
+    color: #FE980F;
+}
+
+strong, .fa-meetup{
+    color: #FE980F;
+    font-size: 28px;
+    font-family: cursive;
+    text-transform: uppercase;
+}
+
+small{
+    color: #2205ff;
+    font-weight: 600;
+}
+
+/* Body Top */
+
+.cards:hover{
+    color: #FE980F;
+    transition:0.9s;
+}
+
+.btn:hover{
+    transition: 1s;
+}
+
+/* Body Center */
+
+.left-sidebar h3, .products h3,
+.price-range h2, .recommended_items h3{
+    color: #FE980F;
+    padding: 5px;
+    font: outline;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.left-sidebar h3:after, .products h3:after,
+.price-range h2:after, .recommended_items h3:after{
+    content: " ";
+    position: absolute;
+    border: 1px solid #f5f5f5;
+    bottom: 14px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: -2; 
+}
+
+.left-sidebar h3:before, .products h3:before,
+.price-range h2:before, .recommended_items h3:before{
+    content: " ";
+    position: absolute;
+    background: #FFF;
+    bottom: -6px;
+    width: 130px;
+    height: 30px;
+    left: 50%;
+    margin-left: -65px;
+    z-index: -1;
+}
+
+.category ul li a, .brands ul li a{
+    color: #000;
+    font: outline;
+    font-family: sans-serif;
+    font-weight: 600;
+    padding: 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.category ul li a:hover, .brands ul li a:hover{
+    color: #FE980F;
+    transition: 0.4s; 
+}
+.price-range{
+    margin-top:30px;
+}
+
+/* recommended_items */
+
+.recommended_items {
+    overflow: hidden;
+}
+
+#recommended-item-carousel .carousel-inner .item {
+    padding-left: 0;
+}
+
+.productinfo img{
+    width: 100%;
+}
+
+.productinfo{
+    position:relative;
+}
+
+.recommended-item-control{
+    position: absolute;
+    top: 41%;
+}
+  
+.recommended-item-control i{
+    background: none repeat scroll 0 0 #FE980F;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 4px 10px;
+}
+  
+.recommended-item-control i:hover{
+    background: #ccccc6;
+}
+
+.fa-angle-left, .fa-angle-right{
+    color: #FE980F;
+    font-size: 35px;
+    overflow: hidden;
+}
+
+.fa-angle-left:hover, .fa-angle-right:hover{
+    color: #FE980F;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: #FE980F;
+}
+
+.btn:hover{
+    color: #fff;
+    background: #FE980F;
+}
+
+.recommended h2{
+    color: #FE980F;
+    background: #FFF;
+}
+.recommended .btn{
+    color: #FE980F;
+    background: #f5f5f5;
+    border-radius: 0;
+}
+
+.recommended .btn:hover{
+    color: #fff;
+    background: #FE980F;
+    border-radius: 0;
+}
+
+
+
